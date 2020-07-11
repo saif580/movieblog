@@ -5,6 +5,8 @@ mongoose=require("mongoose"),
 methodoverride=require("method-override"),
 expressSanitizer=require("express-sanitizer");
 
+var PORT=process.env.PORT||3000;
+
 //APP CONFIGURATON
 mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set("view engine", "ejs");
@@ -102,6 +104,6 @@ app.delete("/blogs/:id",function(req,res){
     });
 });
 
-app.listen(3000,function(req,res){
+app.listen(PORT,function(req,res){
     console.log("Server Started at port 3000");
 });
