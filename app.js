@@ -3,12 +3,16 @@ app=express(),
 bodyParser=require("body-parser"),
 mongoose=require("mongoose"),
 methodoverride=require("method-override"),
-expressSanitizer=require("express-sanitizer");
+expressSanitizer=require("express-sanitizer"),
+dotenv=require("dotenv");
+dotenv.config();
 
 var PORT=process.env.PORT||3000;
 
 //APP CONFIGURATON
-mongoose.connect("mongodb://localhost/restful_blog_app");
+// mongoose.connect("mongodb://localhost/restful_blog_app");
+
+require("./db");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -105,5 +109,5 @@ app.delete("/blogs/:id",function(req,res){
 });
 
 app.listen(PORT,function(req,res){
-    console.log("Server Started at port 3000");
+    console.log("Server Started at "+PORT);
 });
