@@ -1,0 +1,27 @@
+i.icon{
+    font-size: 2em;
+}
+.ui.text.container {
+    margin-top: 7.0em;
+}
+#delete {
+    display: inline;
+}
+.ui.basic.orange.button, .ui.basic.orange.buttons .button {
+    box-shadow: 0 0 0 1px #f2711c inset!important;
+    color: #f2711c!important;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+#small{
+    padding-bottom: 0px;
+}
+#footer{
+    margin-bottom: 0px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }
